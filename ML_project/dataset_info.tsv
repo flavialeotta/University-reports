@@ -1,0 +1,49 @@
+index	name	type	variables	missing_values(%)	from_model	description
+0	id	Integer	[1 - 9105]	0	False	None
+1	age	Continuous	[18.04199 - 101.84796]	0	False	Age of the patients in years
+2	death	Continuous	[0 - 1]	0	False	Death at any time up to National Death Index (NDI) data on 31 of December of 1994. Some patients are discharged before the end of the study and are not followed up. The authors looked up the information about death.
+3	sex	Categorical	['male', 'female']	0	False	Gender of the patient. Listed values are {male, female}.
+4	hospdead	Binary	[0 - 1]	0	False	Death in hospital
+5	slos	Continuous	[3 - 343]	0	False	Days from Study Entry to Discharge
+6	d.time	Continuous	[3 - 2029]	0	False	Days of follow-up
+7	dzgroup	Categorical	['Lung Cancer', 'Cirrhosis', 'ARF/MOSF w/Sepsis', 'Coma', 'CHF', 'Colon Cancer', 'COPD', 'MOSF w/Malig']	0	False	The patient's disease sub category amogst ARF/MOSF w/Sepsis, CHF, COPD, Cirrhosis, Colon Cancer, Coma, Lung Cancer, MOSF w/Malig.
+8	dzclass	Categorical	['Cancer', 'COPD/CHF/Cirrhosis', 'ARF/MOSF', 'Coma']	0	False	The patient's disease category amongst "ARF/MOSF", "COPD/CHF/Cirrhosis", "Cancer", "Coma".
+9	num.co	Continuous	[0 - 9]	0	False	The number of simultaneous diseases (or comorbidities) exhibited by the patient. Values are ordinal with higher values indicating worse condition and chances of survival.
+10	edu	Integer	[0 - 31]	17.95	False	Years of education
+11	income	Categorical	['$11-$25k', 'under $11k', '$25-$50k', '>$50k']	32.75	False	Income of the patient. Listed values are {"$11-$25k", "$25-$50k", ">$50k", "under $11k"}.
+12	scoma	Continuous	[0.0 - 100.0]	0.01	True	SUPPORT day 3 Coma Score based on Glasgow scale (predicted by a model).
+13	charges	Continuous	[1169.0 - 1435423.0]	1.89	False	Hospital charges
+14	totcst	Continuous	[0.0 - 633212.0]	9.75	False	Total ratio of costs to charges (RCC) cost
+15	totmcst	Continuous	[-102.71997 - 710682.0]	38.17	False	Total micro cost
+16	avtisst	Continuous	[1.0 - 83.0]	0.9	False	Average TISS score, days 3-25, where Therapeutic Intervention Scoring System (TISS) is a method for calculating costs in the intensive care unit (ICU) and intermediate care unit (IMCU).
+17	race	Categorical	['other', 'white', 'black', 'hispanic', 'asian']	0.46	False	Race of the patient. Listed values are {asian, black, hispanic, missing, other, white}.
+18	sps	Continuous	[0.1999817 - 99.1875]	0.01	True	SUPPORT physiology score on day 3 (predicted by a model).
+19	aps	Continuous	[0.0 - 143.0]	0.01	True	APACHE III day 3 physiology score (no coma, imp bun,uout for ph1)
+20	surv2m	Continuous	[0.0 - 0.969970703]	0.01	True	SUPPORT model 2-month survival estimate at day 3  (predicted by a model)
+21	surv6m	Continuous	[0.0 - 0.947998047]	0.01	True	SUPPORT model 6-month survival estimate at day 3  (predicted by a model)
+22	hday	Integer	[1 - 148]	0	False	Day in hospital at which patient entered study.
+23	diabetes	Continuous	[0 - 1]	0	False	Whether the patient exhibits diabetes (Com 27-28, Dx 73) as a comorbidity (Y) or not (N).
+24	dementia	Continuous	[0 - 1]	0	False	Whether the patient exhibits dementia (Comorbidity 6) as a comorbidity (Y) or not (N).
+25	ca	Categorical	['metastatic', 'no', 'yes']	0	False	Whether the patient has cancer (yes), whether it has spread out (metastatic), or if it is healthy (no).
+26	prg2m	Continuous	[0.0 - 1.0]	18.11	True	Physician’s 2-month survival estimate for patient.
+27	prg6m	Continuous	[0.0 - 1.0]	17.94	True	Physician’s 6-month survival estimate for patient.
+28	dnr	Categorical	['no dnr', 'dnr after sadm', 'dnr before sadm']	0.33	True	Whether the patient has a do not rescuscitate (DNR) order or not. Possible values are dnr after sadm, dnr before sadm, missing, no dnr.
+29	dnrday	Continuous	[-88.0 - 285.0]	0.33	True	Day of DNR order (<0 if before study)
+30	meanbp	Continuous	[0.0 - 195.0]	0.01	False	mean arterial blood pressure of the patient, measured at day 3.
+31	wblc	Continuous	[0.0 - 200.0]	2.33	False	counts of white blood cells (in thousands) measured at day 3.
+32	hrt	Continuous	[0.0 - 300.0]	0.01	False	heart rate of the patient measured at day 3.
+33	resp	Continuous	[0.0 - 90.0]	0.01	False	respiration rate of the patient measured at day 3.
+34	temp	Continuous	[31.69922 - 41.69531]	0.01	False	temperature in Celsius degrees measured at day 3.
+35	pafi	Continuous	[12.0 - 890.375]	25.54	False	$PaO_2/FiO_2$ ratio measured at day 3. The ratio of arterial oxygen partial pressure (PaO2 in mmHg) to fractional inspired oxygen (FiO2 expressed as a fraction). Widely used clinical indicator of hypoxaemia, though its diagnostic utility is controversial. Specific ranges of values can be associated with different levels of mortality. May be worth considering binning these values according to some ranges: https://litfl.com/pao2-fio2-ratio/
+36	alb	Continuous	[0.3999634 - 29.0]	37.03	False	serum albumin levels measured at day 3.
+37	bili	Continuous	[0.09999084 - 63.0]	28.57	False	bilirubin levels measured at day 3.
+38	crea	Continuous	[0.09999084 - 21.5]	0.74	False	serum creatinine levels measured at day 3.
+39	sod	Continuous	[110.0 - 181.0]	0.01	False	serum sodium concentration measured at day 3.
+40	ph	Continuous	[6.829102 - 7.769531]	25.09	False	Arterial blood pH. The pH of blood is usually between 7.35 and 7.45. Abnormal results may be due to lung, kidney, metabolic diseases, or medicines. Head or neck injuries or other injuries that affect breathing can also lead to abnormal results.
+41	glucose	Integer	[0.0 - 1092.0]	49.42	False	Glucose levels measured at day 3.
+42	bun	Integer	[1.0 - 300.0]	47.8	False	Blood urea nitrogen levels measured at day 3.
+43	urine	Integer	[0.0 - 9000.0]	53.4	False	Urine output measured at day 3.
+44	adlp	Integer	[0 - 7]	61.95	False	Index of Activities of Daily Living (ADL) of the patient, filled out by the patient. Higher values indicate more chance of survival, measured at day 3.
+45	adls	Continuous	[0.0 - 7.0]	31.49	False	Index of Activities of Daily Living (ADL) of the patient, filled out by a surrogate (e.g. family member), measured at day 3. Higher values indicate more chance of survival.
+46	sfdm2	Categorical	['<2 mo. follow-up', 'no(M2 and SIP pres)', 'SIP>=30', 'adl>=4 (>=5 if sur)', 'Coma or Intub']	15.38	False	Level of functional disability of the patient in a 1-5 scale, with 5 being the highest severity. The values were obtained via questionairres to the patient and/or surrogates to determine the Sickness Profile Impact (SIP). Values are correlated with ADLS, ADLP columns. Listed values are: {1: "no(Month 2 and SIP pres)", "adl>=4 (>=5 if sur)", "SIP>=30", "Coma or Intub", 5: "<2 mo. follow-up"}. There are 159 patients surviving 2 months for whom there were no patient or surrogate interviews. These patients have missing sfdm2.
+47	adlsc	Continuous	[0.0 - 7.0732422]	0	False	Imputed ADL Calibrated to Surrogate.
